@@ -3,236 +3,221 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Claude Skills — Ready-to-Use Skills for Claude | DhanushNehru</title>
-<meta name="description" content="22+ ready-to-use skill files that transform Claude into specialized AI agents. Copy the system prompt, paste into Claude, and go."/>
-<meta property="og:title" content="Claude Skills by DhanushNehru"/>
-<meta property="og:description" content="Ready-to-use skill files that transform Claude into specialized AI agents. No prompt engineering required."/>
+<title>Claude Skills — The Ultimate Library for Claude Agents</title>
+<meta name="description" content="22+ high-performance skill files that transform Claude into a specialized engineering powerhouse."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#09090f;--surface:#111118;--surface2:#18181f;--border:#252535;
-  --accent:#c77dff;--accent2:#7b2fff;--accent3:#e0aaff;
-  --text:#ede8f5;--text2:#9d96b3;--text3:#58527a;
-  --developer:#60a5fa;--security:#f87171;--data:#34d399;--writing:#fbbf24;
-  --devops:#fb923c;--productivity:#e879f9;--creative:#f472b6;--architecture:#a78bfa;
+  --bg:#05070a;--surface:#0c1210;--surface2:#161f1c;--border:#1e2d28;
+  --accent:#10b981;--accent-glow:rgba(16,185,129,0.3);
+  --text:#f0fdf4;--text2:#94a3b8;--text3:#475569;
+  --developer:#38bdf8;--security:#ef4444;--data:#fbbf24;--writing:#a78bfa;
+  --devops:#f472b6;--productivity:#2dd4bf;--creative:#fb923c;--architecture:#818cf8;
 }
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:"Inter",sans-serif;min-height:100vh;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:"Space Grotesk",sans-serif;min-height:100vh;overflow-x:hidden}
 
-/* HERO */
+/* PREMIUM GRID BACKGROUND */
+.grid-bg{position:fixed;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(circle at 50% 50%,black,transparent);opacity:0.2;pointer-events:none;z-index:-1}
+
+/* HERO SECTION */
 .hero{
-  position:relative;overflow:hidden;
-  background:linear-gradient(160deg,#09090f 0%,#13092a 60%,#09090f 100%);
-  border-bottom:1px solid var(--border);padding:80px 24px 60px;text-align:center;
+  padding:100px 24px 80px;text-align:center;position:relative;
 }
-.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(123,47,255,.2),transparent);pointer-events:none}
-.hero::after{content:"";position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(199,125,255,.06) 0%,transparent 70%);top:-200px;left:50%;transform:translateX(-50%);pointer-events:none}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);
+  border-radius:100px;padding:8px 20px;font-size:12px;color:var(--accent);
+  margin-bottom:32px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;
+}
+.hero h1{font-size:clamp(2.5rem,7vw,4.5rem);font-weight:700;line-height:0.95;letter-spacing:-0.04em;margin-bottom:24px}
+.hero h1 .emerald{color:var(--accent);text-shadow:0 0 30px var(--accent-glow)}
+.hero p{font-size:1.2rem;color:var(--text2);max-width:650px;margin:0 auto 48px;line-height:1.5}
 
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(123,47,255,.15);border:1px solid rgba(123,47,255,.3);border-radius:100px;padding:6px 18px;font-size:13px;color:var(--accent);margin-bottom:28px;font-weight:500}
-.hero h1{font-size:clamp(2rem,5.5vw,3.6rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;margin-bottom:18px}
-.hero h1 .grad{background:linear-gradient(135deg,#c77dff,#7b2fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero p{font-size:1.1rem;color:var(--text2);max-width:580px;margin:0 auto 36px;line-height:1.65}
-.hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(135deg,#c77dff,#7b2fff);color:#fff;padding:13px 26px;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;transition:all .2s;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(123,47,255,.4)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(123,47,255,.5)}
-.btn-secondary{background:transparent;border:1px solid var(--border);color:var(--text);padding:13px 26px;border-radius:12px;font-weight:500;font-size:14px;text-decoration:none;transition:all .2s;cursor:pointer}
-.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
-.hero-stats{display:flex;justify-content:center;gap:40px;margin-top:48px;flex-wrap:wrap}
-.stat-num{font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.stat-label{font-size:12px;color:var(--text3);margin-top:3px}
+.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-emerald{
+  background:var(--accent);color:#05070a;padding:16px 32px;border-radius:0;
+  font-weight:700;font-size:15px;text-decoration:none;transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+  border:none;cursor:pointer;clip-path:polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+.btn-emerald:hover{transform:scale(1.05);filter:brightness(1.1);box-shadow:0 0 40px var(--accent-glow)}
+.btn-outline{
+  background:transparent;border:1px solid var(--border);color:var(--text);
+  padding:16px 32px;border-radius:0;font-weight:600;font-size:15px;
+  text-decoration:none;transition:all 0.2s;cursor:pointer;
+  clip-path:polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);background:rgba(16,185,129,0.05)}
 
-/* HOW TO USE */
-.how-strip{background:var(--surface);border-bottom:1px solid var(--border);padding:32px 24px}
-.how-strip-inner{max-width:1100px;margin:0 auto}
-.how-strip h2{font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
-.how-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.how-step{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:16px}
-.how-step-num{font-size:10px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
-.how-step h3{font-size:14px;font-weight:600;margin-bottom:6px}
-.how-step p{font-size:13px;color:var(--text2);line-height:1.5}
-.how-step code{font-size:11.5px;font-family:"JetBrains Mono",monospace;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:7px 10px;display:block;color:var(--text2);margin-top:8px;overflow-x:auto;white-space:nowrap}
+/* SEARCH & FILTERS */
+.search-container{max-width:900px;margin:0 auto;padding:0 24px}
+.search-box{
+  background:var(--surface);border:1px solid var(--border);
+  position:relative;padding:2px;display:flex;align-items:center;
+}
+.search-box input{
+  width:100%;background:transparent;border:none;padding:20px 24px;
+  color:var(--text);font-size:18px;font-family:inherit;outline:none;
+}
+.search-box::after{content:"";position:absolute;bottom:-1px;left:0;width:0;height:2px;background:var(--accent);transition:width 0.4s ease}
+.search-box:focus-within::after{width:100%}
 
-/* SEARCH */
-.search-bar{max-width:700px;margin:0 auto;padding:32px 24px 0}
-.search-wrap{position:relative}
-.search-wrap input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:15px 20px 15px 50px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .2s;outline:none}
-.search-wrap input:focus{border-color:var(--accent)}
-.search-wrap input::placeholder{color:var(--text3)}
-.search-icon{position:absolute;left:17px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:18px;pointer-events:none}
+.filters{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;justify-content:center}
+.filter-btn{
+  background:transparent;border:none;color:var(--text3);
+  font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s;
+  text-transform:uppercase;letter-spacing:0.1em;padding:8px 12px;
+}
+.filter-btn:hover{color:var(--text2)}
+.filter-btn.active{color:var(--accent);border-bottom:2px solid var(--accent)}
 
-/* FILTERS */
-.filters{display:flex;gap:8px;flex-wrap:wrap;max-width:1100px;margin:20px auto 0;padding:0 24px}
-.filter-btn{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:7px 15px;font-size:13px;font-weight:500;color:var(--text2);cursor:pointer;transition:all .2s}
-.filter-btn:hover{border-color:var(--accent);color:var(--accent)}
-.filter-btn.active{color:#fff!important}
-.filter-btn[data-cat="all"].active{background:var(--accent);border-color:var(--accent)}
-.filter-btn[data-cat="developer"].active{background:var(--developer);border-color:var(--developer);color:#000!important}
-.filter-btn[data-cat="security"].active{background:var(--security);border-color:var(--security)}
-.filter-btn[data-cat="data"].active{background:var(--data);border-color:var(--data);color:#000!important}
-.filter-btn[data-cat="writing"].active{background:var(--writing);border-color:var(--writing);color:#000!important}
-.filter-btn[data-cat="devops"].active{background:var(--devops);border-color:var(--devops);color:#000!important}
-.filter-btn[data-cat="productivity"].active{background:var(--productivity);border-color:var(--productivity)}
-.filter-btn[data-cat="creative"].active{background:var(--creative);border-color:var(--creative)}
-.filter-btn[data-cat="architecture"].active{background:var(--architecture);border-color:var(--architecture);color:#000!important}
+/* SKILLS GRID */
+.skills-section{max-width:1200px;margin:60px auto 100px;padding:0 24px}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:32px;border-bottom:1px solid var(--border);padding-bottom:12px}
+.section-head h2{font-size:14px;color:var(--text3);text-transform:uppercase;letter-spacing:0.2em}
 
-/* GRID */
-.results-header{max-width:1100px;margin:22px auto 0;padding:0 24px;color:var(--text3);font-size:13px}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;max-width:1100px;margin:14px auto 64px;padding:0 24px}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:24px}
 
 .skill-card{
-  background:var(--surface);border:1px solid var(--border);border-radius:16px;
-  padding:22px;transition:all .22s;cursor:pointer;position:relative;overflow:hidden;
+  background:var(--surface);border:1px solid var(--border);padding:32px;
+  transition:all 0.4s cubic-bezier(0.4,0,0.2,1);cursor:pointer;
+  position:relative;display:flex;flex-direction:column;
 }
-.skill-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--cat-c,var(--accent));border-radius:16px 16px 0 0}
-.skill-card:hover{border-color:rgba(199,125,255,.3);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.35)}
+.skill-card:hover{
+  background:var(--surface2);border-color:var(--accent);
+  transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+.skill-card::before{
+  content:attr(data-count);position:absolute;top:20px;right:24px;
+  font-size:40px;font-weight:800;color:var(--text);opacity:0.03;
+}
 
-.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
-.card-title{font-size:15px;font-weight:700;line-height:1.3}
-.card-cat{font-size:10px;font-weight:600;padding:3px 9px;border-radius:100px;text-transform:capitalize;letter-spacing:.04em;white-space:nowrap;flex-shrink:0}
-.card-desc{font-size:13px;color:var(--text2);line-height:1.55;margin-bottom:14px}
-.card-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.meta-tag{font-size:11px;background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:2px 8px;color:var(--text3)}
-.card-footer{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.card-works{display:flex;gap:4px;flex-wrap:wrap}
-.works-tag{font-size:10px;background:rgba(199,125,255,.1);border:1px solid rgba(199,125,255,.2);border-radius:5px;padding:2px 7px;color:var(--accent3)}
-.copy-btn{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:5px 12px;font-size:12px;color:var(--text2);cursor:pointer;transition:all .2s;font-weight:500;white-space:nowrap}
-.copy-btn:hover{background:var(--accent2);border-color:var(--accent2);color:#fff}
+.card-cat{
+  font-size:11px;font-weight:700;color:var(--cat-c);text-transform:uppercase;
+  letter-spacing:0.15em;margin-bottom:16px;display:flex;align-items:center;gap:8px;
+}
+.card-cat::before{content:"";width:8px;height:8px;background:var(--cat-c);border-radius:50%}
+
+.card-title{font-size:22px;font-weight:600;margin-bottom:12px;line-height:1.2}
+.card-desc{font-size:15px;color:var(--text2);line-height:1.6;margin-bottom:24px;flex-grow:1}
+
+.card-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:20px}
+.card-meta{display:flex;gap:12px;font-size:12px;color:var(--text3);font-weight:600}
+.copy-btn-mini{
+  background:transparent;border:1px solid var(--border);color:var(--text2);
+  padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.2s;
+}
+.copy-btn-mini:hover{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+
+/* MODAL */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(5,7,10,0.95);z-index:100;
+  display:none;align-items:center;justify-content:center;padding:24px;
+}
+.modal-overlay.open{display:flex}
+.modal{
+  background:var(--surface);border:1px solid var(--border);width:100%;
+  max-width:900px;max-height:90vh;display:flex;flex-direction:column;position:relative;
+}
+.modal-close{
+  position:absolute;top:-40px;right:0;background:none;border:none;
+  color:var(--text2);font-size:14px;cursor:pointer;text-transform:uppercase;letter-spacing:0.1em;
+}
+.modal-content{padding:48px;overflow-y:auto}
+.modal-header{margin-bottom:32px}
+.modal-title{font-size:36px;font-weight:700;margin-bottom:12px}
+.modal-body{
+  background:#000;border:1px solid var(--border);padding:24px;
+  font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent);
+  line-height:1.6;overflow-x:auto;white-space:pre-wrap;margin-bottom:32px;
+}
+.modal-actions{display:flex;gap:16px}
 
 /* CAT COLORS */
 [data-cat="developer"]{--cat-c:var(--developer)}[data-cat="security"]{--cat-c:var(--security)}
 [data-cat="data"]{--cat-c:var(--data)}[data-cat="writing"]{--cat-c:var(--writing)}
 [data-cat="devops"]{--cat-c:var(--devops)}[data-cat="productivity"]{--cat-c:var(--productivity)}
 [data-cat="creative"]{--cat-c:var(--creative)}[data-cat="architecture"]{--cat-c:var(--architecture)}
-.bg-developer{background:rgba(96,165,250,.15);color:var(--developer)}
-.bg-security{background:rgba(248,113,113,.15);color:var(--security)}
-.bg-data{background:rgba(52,211,153,.15);color:var(--data)}
-.bg-writing{background:rgba(251,191,36,.15);color:var(--writing)}
-.bg-devops{background:rgba(251,146,60,.15);color:var(--devops)}
-.bg-productivity{background:rgba(232,121,249,.15);color:var(--productivity)}
-.bg-creative{background:rgba(244,114,182,.15);color:var(--creative)}
-.bg-architecture{background:rgba(167,139,250,.15);color:var(--architecture)}
 
-/* MODAL */
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(8px);z-index:100;display:none;align-items:flex-start;justify-content:center;padding:32px 16px;overflow-y:auto}
-.modal-overlay.open{display:flex}
-.modal{background:var(--surface);border:1px solid var(--border);border-radius:20px;max-width:740px;width:100%;padding:28px;position:relative;margin:auto}
-.modal-close{position:absolute;top:14px;right:14px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:5px 12px;cursor:pointer;color:var(--text2);font-size:13px;transition:color .15s}
-.modal-close:hover{color:var(--text)}
-.modal-top{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px}
-.modal h2{font-size:1.4rem;font-weight:700;line-height:1.2}
-.modal-desc{font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px}
-.modal-tags{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
-.modal-body{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:18px;font-size:12.5px;font-family:"JetBrains Mono",monospace;color:var(--text2);line-height:1.7;max-height:400px;overflow-y:auto;white-space:pre-wrap;tab-size:2}
-.modal-hint{font-size:12px;color:var(--text3);margin:10px 0}
-.modal-actions{display:flex;gap:10px;flex-wrap:wrap}
-.no-results{text-align:center;padding:60px 24px;color:var(--text3);grid-column:1/-1}
-.no-results h3{font-size:1.1rem;color:var(--text2);margin-bottom:6px}
+footer{padding:60px 24px;border-top:1px solid var(--border);text-align:center}
+.footer-links{display:flex;gap:32px;justify-content:center;margin-bottom:24px}
+.footer-links a{color:var(--text3);text-decoration:none;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s}
+.footer-links a:hover{color:var(--accent)}
+.copyright{color:var(--text3);font-size:12px;text-transform:uppercase;letter-spacing:0.1em}
 
-/* FOOTER */
-footer{border-top:1px solid var(--border);padding:28px 24px;text-align:center;color:var(--text3);font-size:13px}
-.footer-links{display:flex;gap:22px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
-footer a{color:var(--accent);text-decoration:none}footer a:hover{text-decoration:underline}
-
-@media(max-width:600px){
-  .hero{padding:48px 16px 36px}
-  .hero-stats{gap:20px}
-  .skills-grid{grid-template-columns:1fr;padding:0 12px}
-  .filters{padding:0 12px}
+@media(max-width:768px){
+  .hero{padding:60px 20px 40px}
+  .hero h1{font-size:3rem}
+  .skills-grid{grid-template-columns:1fr}
+  .modal-content{padding:24px}
 }
 </style>
 </head>
 <body>
 
+<div class="grid-bg"></div>
+
 <section class="hero">
-  <div class="hero-badge">🧠 Plug-in skills for Claude</div>
-  <h1>Claude <span class="grad">Skills</span></h1>
-  <p>Ready-to-use skill files that transform Claude into specialized AI agents. No prompt engineering required — just copy, paste, and go.</p>
+  <div class="hero-badge">Claude Engineering Core</div>
+  <h1>Level Up <span class="emerald">Claude</span></h1>
+  <p>A precision-engineered library of 22+ skill files designed to turn Claude into a specialized co-pilot for your entire development stack.</p>
   <div class="hero-cta">
-    <a href="https://github.com/DhanushNehru/claude-skills" class="btn-primary">⭐ Star on GitHub</a>
-    <a href="https://github.com/DhanushNehru/claude-skills/blob/main/CONTRIBUTING.md" class="btn-secondary">Contribute a Skill</a>
-  </div>
-  <div class="hero-stats">
-    <div class="stat"><div class="stat-num" id="total-count">22</div><div class="stat-label">Skills</div></div>
-    <div class="stat"><div class="stat-num">8</div><div class="stat-label">Categories</div></div>
-    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Ways to Use</div></div>
-    <div class="stat"><div class="stat-num">MIT</div><div class="stat-label">License</div></div>
+    <a href="https://github.com/DhanushNehru/claude-skills" class="btn-emerald">View Repository</a>
+    <a href="https://github.com/DhanushNehru/claude-skills/blob/main/CONTRIBUTING.md" class="btn-outline">Contribute</a>
   </div>
 </section>
 
-<div class="how-strip">
-  <div class="how-strip-inner">
-    <h2>How to use a skill</h2>
-    <div class="how-steps">
-      <div class="how-step">
-        <div class="how-step-num">Method 1 · Claude.ai</div>
-        <h3>Project Instructions</h3>
-        <p>Open any skill below → click Copy → paste into <strong>Claude.ai → Project Knowledge</strong> or <strong>Custom Instructions</strong>.</p>
-      </div>
-      <div class="how-step">
-        <div class="how-step-num">Method 2 · Claude Code</div>
-        <h3>CLAUDE.md</h3>
-        <code>cat skills/developer/code-reviewer.md >> CLAUDE.md</code>
-      </div>
-      <div class="how-step">
-        <div class="how-step-num">Method 3 · API / SDK</div>
-        <h3>System Prompt</h3>
-        <p>Read the skill file and pass it as the <code style="font-size:12px;background:var(--bg);padding:2px 5px;border-radius:4px">system</code> parameter in your API call.</p>
-      </div>
-    </div>
+<div class="search-container">
+  <div class="search-box">
+    <input type="text" id="search" placeholder="SEARCH SKILLS_ CORPS..." autocomplete="off"/>
+  </div>
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-cat="all">All_</button>
+    <button class="filter-btn" data-cat="developer">Dev_</button>
+    <button class="filter-btn" data-cat="security">Sec_</button>
+    <button class="filter-btn" data-cat="data">Data_</button>
+    <button class="filter-btn" data-cat="architecture">Arch_</button>
+    <button class="filter-btn" data-cat="devops">Ops_</button>
+    <button class="filter-btn" data-cat="writing">Write_</button>
+    <button class="filter-btn" data-cat="productivity">Prod_</button>
+    <button class="filter-btn" data-cat="creative">Art_</button>
   </div>
 </div>
 
-<div class="search-bar">
-  <div class="search-wrap">
-    <span class="search-icon">🔍</span>
-    <input type="text" id="search" placeholder="Search skills... e.g. code review, security, SQL, meeting" autocomplete="off" aria-label="Search skills"/>
+<div class="skills-section">
+  <div class="section-head">
+    <h2 id="results-count">Initializing...</h2>
+    <h2>Ready for Copy</h2>
   </div>
+  <div class="skills-grid" id="skills-grid"></div>
 </div>
 
-<div class="filters" id="filters">
-  <button class="filter-btn active" data-cat="all">All</button>
-  <button class="filter-btn" data-cat="developer">🛠️ Developer</button>
-  <button class="filter-btn" data-cat="security">🔒 Security</button>
-  <button class="filter-btn" data-cat="data">📊 Data</button>
-  <button class="filter-btn" data-cat="writing">✍️ Writing</button>
-  <button class="filter-btn" data-cat="devops">⚙️ DevOps</button>
-  <button class="filter-btn" data-cat="productivity">🧩 Productivity</button>
-  <button class="filter-btn" data-cat="creative">🎨 Creative</button>
-  <button class="filter-btn" data-cat="architecture">🏗️ Architecture</button>
-</div>
-
-<div class="results-header" id="results-count"></div>
-<div class="skills-grid" id="skills-grid"></div>
-
-<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+<div class="modal-overlay" id="modal">
   <div class="modal">
-    <button class="modal-close" id="modal-close" aria-label="Close">✕ Close</button>
-    <div class="modal-top">
-      <div>
-        <div class="modal-tags" id="modal-tags"></div>
-        <h2 id="modal-title"></h2>
+    <button class="modal-close" id="modal-close">_CLOSE_WINDOW</button>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-title"></h2>
         <p class="modal-desc" id="modal-desc"></p>
       </div>
-    </div>
-    <div class="modal-body" id="modal-body">Loading skill...</div>
-    <p class="modal-hint">Copy the <code style="font-size:11px;background:var(--surface2);padding:2px 6px;border-radius:4px">&lt;system_prompt&gt;</code> block and paste it into Claude.ai, CLAUDE.md, or your API system parameter.</p>
-    <div class="modal-actions">
-      <button class="btn-primary" id="modal-copy">📋 Copy Skill</button>
-      <a class="btn-secondary" id="modal-github" href="#" target="_blank" rel="noopener">View on GitHub →</a>
+      <div class="modal-body" id="modal-body"></div>
+      <div class="modal-actions">
+        <button class="btn-emerald" id="modal-copy">COPY_SYSTEM_PROMPT</button>
+        <a class="btn-outline" id="modal-github" href="#" target="_blank">VIEW_ON_GITHUB</a>
+      </div>
     </div>
   </div>
 </div>
 
 <footer>
   <div class="footer-links">
-    <a href="https://github.com/DhanushNehru/claude-skills">GitHub Repo</a>
+    <a href="https://github.com/DhanushNehru/claude-skills">GitHub</a>
     <a href="https://github.com/DhanushNehru/claude-skills/blob/main/CONTRIBUTING.md">Contribute</a>
-    <a href="https://github.com/DhanushNehru/claude-skills/blob/main/SKILL_TEMPLATE.md">Skill Template</a>
-    <a href="https://github.com/DhanushNehru/claude-skills/blob/main/LICENSE">MIT License</a>
+    <a href="https://github.com/DhanushNehru/claude-skills/blob/main/LICENSE">License</a>
   </div>
-  <p>Made with 🧠 by <a href="https://github.com/DhanushNehru">DhanushNehru</a> &amp; the community</p>
+  <div class="copyright">© 2024 DhanushNehru // DevelopersGlobal</div>
 </footer>
 
 <script>
@@ -245,50 +230,35 @@ async function init() {
     let r = await fetch("../skills/index.json").catch(() => null);
     if (!r || !r.ok) r = await fetch(RAW + "skills/index.json");
     skills = await r.json();
+    render();
   } catch(e) {
-    document.getElementById("skills-grid").innerHTML =
-      '<div class="no-results"><h3>Could not load skills</h3><p>Visit the <a href="https://github.com/DhanushNehru/claude-skills" style="color:var(--accent)">GitHub repository</a> directly.</p></div>';
-    return;
+    document.getElementById("skills-grid").innerHTML = "Error loading skills.";
   }
-  document.getElementById("total-count").textContent = skills.length;
-  render();
 }
 
 function render() {
   const q = query.toLowerCase();
   const filtered = skills.filter(s =>
     (activeFilter === "all" || s.category === activeFilter) &&
-    (!q || s.title.toLowerCase().includes(q) || s.description.toLowerCase().includes(q) || s.category.includes(q) || (s.name||"").includes(q))
+    (!q || s.title.toLowerCase().includes(q) || s.description.toLowerCase().includes(q))
   );
-  document.getElementById("results-count").textContent =
-    filtered.length + " skill" + (filtered.length !== 1 ? "s" : "") +
-    (activeFilter !== "all" ? " in " + activeFilter : "") +
-    (q ? ' matching "' + query + '"' : "");
-
+  document.getElementById("results-count").textContent = filtered.length + " SKILLS_FOUND";
+  
   const grid = document.getElementById("skills-grid");
-  if (!filtered.length) {
-    grid.innerHTML = '<div class="no-results"><h3>No skills found</h3><p>Try a different search term or category</p></div>';
-    return;
-  }
-  grid.innerHTML = filtered.map(s => `
-    <div class="skill-card" data-cat="${s.category}" onclick="openModal('${s.name}')" id="card-${s.name}" tabindex="0" role="button" aria-label="${s.title}">
-      <div class="card-top">
-        <div class="card-title">${s.title}</div>
-        <span class="card-cat bg-${s.category}">${s.category}</span>
-      </div>
+  grid.innerHTML = filtered.map((s, i) => `
+    <div class="skill-card" data-cat="${s.category}" data-count="${String(i+1).padStart(2,'0')}" onclick="openModal('${s.name}')">
+      <div class="card-cat">${s.category}</div>
+      <div class="card-title">${s.title}</div>
       <p class="card-desc">${s.description}</p>
-      <div class="card-meta">
-        <span class="meta-tag">Difficulty: ${s.difficulty}</span>
-        <span class="meta-tag">${s.tokens}</span>
-      </div>
       <div class="card-footer">
-        <div class="card-works">${(s.works_with||[]).map(w=>`<span class="works-tag">${w.trim()}</span>`).join("")}</div>
-        <button class="copy-btn" onclick="event.stopPropagation();copySkill('${s.name}')" id="copybtn-${s.name}">📋 Copy</button>
+        <div class="card-meta">
+          <span>${s.difficulty}</span>
+          <span>${s.tokens}</span>
+        </div>
+        <button class="copy-btn-mini" onclick="event.stopPropagation();copySkill('${s.name}')" id="copy-${s.name}">COPY</button>
       </div>
-    </div>`).join("");
-  grid.querySelectorAll(".skill-card").forEach(c => {
-    c.addEventListener("keydown", e => { if(e.key==="Enter"||e.key===" ") c.click(); });
-  });
+    </div>
+  `).join("");
 }
 
 document.getElementById("search").addEventListener("input", e => { query = e.target.value; render(); });
@@ -301,35 +271,27 @@ const cache = {};
 async function getContent(name) {
   if (cache[name]) return cache[name];
   const s = skills.find(x => x.name === name);
-  if (!s) return "Skill not found.";
-  try {
-    const r = await fetch(RAW + s.path);
-    const t = await r.text();
-    cache[name] = t; return t;
-  } catch { return "Could not load skill. Please view on GitHub."; }
+  const r = await fetch(RAW + s.path);
+  const t = await r.text();
+  cache[name] = t; return t;
 }
 
-function extractSystemPrompt(content) {
-  const m = content.match(/<system_prompt>([\s\S]*?)<\/system_prompt>/);
-  return m ? m[0].trim() : content;
+function extractPrompt(c) {
+  const m = c.match(/<system_prompt>([\s\S]*?)<\/system_prompt>/);
+  return m ? m[0].trim() : c;
 }
 
 async function openModal(name) {
   const s = skills.find(x => x.name === name);
-  if (!s) return;
   document.getElementById("modal-title").textContent = s.title;
   document.getElementById("modal-desc").textContent = s.description;
-  document.getElementById("modal-tags").innerHTML =
-    `<span class="card-cat bg-${s.category}">${s.category}</span>
-     <span class="meta-tag">${s.difficulty}</span>
-     <span class="meta-tag">${s.tokens}</span>`;
-  document.getElementById("modal-body").textContent = "Loading...";
+  document.getElementById("modal-body").textContent = "LOADING_ENCRYPTED_DATA...";
   document.getElementById("modal-github").href = GH + s.path;
   document.getElementById("modal-copy").onclick = () => copySkill(name, true);
   document.getElementById("modal").classList.add("open");
   document.body.style.overflow = "hidden";
   const content = await getContent(name);
-  document.getElementById("modal-body").textContent = content;
+  document.getElementById("modal-body").textContent = extractPrompt(content);
 }
 
 function closeModal() {
@@ -337,21 +299,15 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 document.getElementById("modal-close").addEventListener("click", closeModal);
-document.getElementById("modal").addEventListener("click", e => { if(e.target===document.getElementById("modal")) closeModal(); });
-document.addEventListener("keydown", e => { if(e.key==="Escape") closeModal(); });
 
 async function copySkill(name, fromModal=false) {
   const content = await getContent(name);
-  // Copy the system_prompt block specifically if available, else full content
-  const prompt = extractSystemPrompt(content);
-  try { await navigator.clipboard.writeText(prompt); } catch { return; }
-  if (!fromModal) {
-    const btn = document.getElementById("copybtn-" + name);
-    if (btn) { btn.textContent = "✅ Copied!"; setTimeout(() => btn.textContent = "📋 Copy", 2000); }
-  } else {
-    const mb = document.getElementById("modal-copy");
-    if (mb) { mb.textContent = "✅ Copied!"; setTimeout(() => mb.textContent = "📋 Copy Skill", 2000); }
-  }
+  const prompt = extractPrompt(content);
+  await navigator.clipboard.writeText(prompt);
+  const btn = fromModal ? document.getElementById("modal-copy") : document.getElementById("copy-" + name);
+  const oldText = btn.textContent;
+  btn.textContent = "COPIED!";
+  setTimeout(() => btn.textContent = oldText, 2000);
 }
 
 init();
