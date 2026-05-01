@@ -1,0 +1,332 @@
+[
+  {
+    "name": "system-design-coach",
+    "title": "🏛️ System Design Coach",
+    "category": "architecture",
+    "emoji": "🏗️",
+    "description": "Interactive system design interview prep and real-world architecture review.",
+    "difficulty": "⭐⭐⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~550 system prompt tokens",
+    "path": "skills/architecture/system-design-coach.md"
+  },
+  {
+    "name": "color-palette-generator",
+    "title": "🎨 Color Palette Generator",
+    "category": "creative",
+    "emoji": "🎨",
+    "description": "Generate accessible, harmonious color palettes from any inspiration.",
+    "difficulty": "⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~350 system prompt tokens",
+    "path": "skills/creative/color-palette-generator.md"
+  },
+  {
+    "name": "naming-consultant",
+    "title": "💡 Naming Consultant",
+    "category": "creative",
+    "emoji": "🎨",
+    "description": "Generate memorable names for projects, products, companies, and features.",
+    "difficulty": "⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~350 system prompt tokens",
+    "path": "skills/creative/naming-consultant.md"
+  },
+  {
+    "name": "csv-detective",
+    "title": "🕵️ CSV Detective",
+    "category": "data",
+    "emoji": "📊",
+    "description": "Profile, clean, and analyze messy CSV/JSON datasets in seconds.",
+    "difficulty": "⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~350 system prompt tokens",
+    "path": "skills/data/csv-detective.md"
+  },
+  {
+    "name": "data-storyteller",
+    "title": "📖 Data Storyteller",
+    "category": "data",
+    "emoji": "📊",
+    "description": "Transform raw datasets into compelling narratives with visualizations.",
+    "difficulty": "⭐⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~400 system prompt tokens",
+    "path": "skills/data/data-storyteller.md"
+  },
+  {
+    "name": "sql-query-optimizer",
+    "title": "⚡ SQL Query Optimizer",
+    "category": "data",
+    "emoji": "📊",
+    "description": "Analyze and optimize slow SQL queries with execution plan analysis.",
+    "difficulty": "⭐⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~450 system prompt tokens",
+    "path": "skills/data/sql-query-optimizer.md"
+  },
+  {
+    "name": "api-designer",
+    "title": "🏗️ API Designer",
+    "category": "developer",
+    "emoji": "🛠️",
+    "description": "Design clean, consistent RESTful APIs following OpenAPI best practices.",
+    "difficulty": "⭐⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~500 system prompt tokens",
+    "path": "skills/developer/api-designer.md"
+  },
+  {
+    "name": "bug-hunter",
+    "title": "🐛 Bug Hunter",
+    "category": "developer",
+    "emoji": "🛠️",
+    "description": "Systematic debugging agent that traces root causes using structured reasoning.",
+    "difficulty": "⭐⭐⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~550 system prompt tokens",
+    "path": "skills/developer/bug-hunter.md"
+  },
+  {
+    "name": "code-reviewer",
+    "title": "🔍 Code Reviewer",
+    "category": "developer",
+    "emoji": "🛠️",
+    "description": "Production-grade code review that catches bugs, security flaws, and maintainability issues before they ship.",
+    "difficulty": "⭐⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~650 system prompt tokens",
+    "path": "skills/developer/code-reviewer.md"
+  },
+  {
+    "name": "git-commit-crafter",
+    "title": "✍️ Git Commit Crafter",
+    "category": "developer",
+    "emoji": "🛠️",
+    "description": "Generate perfect conventional commits from diffs — never write a bad commit message again.",
+    "difficulty": "⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~400 system prompt tokens",
+    "path": "skills/developer/git-commit-crafter.md"
+  },
+  {
+    "name": "regex-wizard",
+    "title": "🧙 Regex Wizard",
+    "category": "developer",
+    "emoji": "🛠️",
+    "description": "Build, explain, and test regular expressions in any flavor — from simple patterns to complex parsers.",
+    "difficulty": "⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~350 system prompt tokens",
+    "path": "skills/developer/regex-wizard.md"
+  },
+  {
+    "name": "cicd-pipeline-builder",
+    "title": "🔄 CI/CD Pipeline Builder",
+    "category": "devops",
+    "emoji": "⚙️",
+    "description": "Generate production-ready GitHub Actions and GitLab CI pipelines from project descriptions.",
+    "difficulty": "⭐⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~400 system prompt tokens",
+    "path": "skills/devops/cicd-pipeline-builder.md"
+  },
+  {
+    "name": "dockerfile-optimizer",
+    "title": "🐳 Dockerfile Optimizer",
+    "category": "devops",
+    "emoji": "⚙️",
+    "description": "Analyze and optimize Dockerfiles for size, security, and build speed.",
+    "difficulty": "⭐⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~450 system prompt tokens",
+    "path": "skills/devops/dockerfile-optimizer.md"
+  },
+  {
+    "name": "email-diplomat",
+    "title": "💌 Email Diplomat",
+    "category": "productivity",
+    "emoji": "🧩",
+    "description": "Craft professional emails for sensitive or high-stakes situations.",
+    "difficulty": "⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~350 system prompt tokens",
+    "path": "skills/productivity/email-diplomat.md"
+  },
+  {
+    "name": "learning-path-generator",
+    "title": "🗺️ Learning Path Generator",
+    "category": "productivity",
+    "emoji": "🧩",
+    "description": "Create personalized, structured learning roadmaps for any topic.",
+    "difficulty": "⭐⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~400 system prompt tokens",
+    "path": "skills/productivity/learning-path-generator.md"
+  },
+  {
+    "name": "meeting-summarizer",
+    "title": "📋 Meeting Summarizer",
+    "category": "productivity",
+    "emoji": "🧩",
+    "description": "Extract action items, decisions, and key points from meeting transcripts.",
+    "difficulty": "⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~350 system prompt tokens",
+    "path": "skills/productivity/meeting-summarizer.md"
+  },
+  {
+    "name": "dependency-auditor",
+    "title": "🔎 Dependency Auditor",
+    "category": "security",
+    "emoji": "🔒",
+    "description": "Deep-dive analysis of package vulnerabilities, license risks, and supply chain threats.",
+    "difficulty": "⭐⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~450 system prompt tokens",
+    "path": "skills/security/dependency-auditor.md"
+  },
+  {
+    "name": "security-headers-checker",
+    "title": "🔒 Security Headers Checker",
+    "category": "security",
+    "emoji": "🔒",
+    "description": "Analyze and fix HTTP security headers for web applications.",
+    "difficulty": "⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~400 system prompt tokens",
+    "path": "skills/security/security-headers-checker.md"
+  },
+  {
+    "name": "threat-modeler",
+    "title": "🛡️ Threat Modeler",
+    "category": "security",
+    "emoji": "🔒",
+    "description": "STRIDE-based threat modeling for any system architecture — find vulnerabilities before attackers do.",
+    "difficulty": "⭐⭐⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~600 system prompt tokens",
+    "path": "skills/security/threat-modeler.md"
+  },
+  {
+    "name": "changelog-author",
+    "title": "📋 Changelog Author",
+    "category": "writing",
+    "emoji": "✍️",
+    "description": "Generate human-readable changelogs from git history or release notes.",
+    "difficulty": "⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~300 system prompt tokens",
+    "path": "skills/writing/changelog-author.md"
+  },
+  {
+    "name": "readme-generator",
+    "title": "📄 README Generator",
+    "category": "writing",
+    "emoji": "✍️",
+    "description": "Generate stunning, complete README files from codebases — no more blank README shame.",
+    "difficulty": "⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~400 system prompt tokens",
+    "path": "skills/writing/readme-generator.md"
+  },
+  {
+    "name": "technical-writer",
+    "title": "📝 Technical Writer",
+    "category": "writing",
+    "emoji": "✍️",
+    "description": "Write clear, structured technical documentation, ADRs, and design docs.",
+    "difficulty": "⭐⭐",
+    "works_with": [
+      "Claude.ai",
+      "Claude Code",
+      "API"
+    ],
+    "tokens": "~400 system prompt tokens",
+    "path": "skills/writing/technical-writer.md"
+  }
+]
